@@ -24,11 +24,12 @@ const Navbar = () => {
         <li tabIndex={0}>
             <Link>Contact us</Link>
         </li>
-        <li><Link>Dashboard</Link></li>
+        <li><Link to="/dashboard/mycart">Dashboard</Link></li>
         <li><Link to="/menu">Our menu</Link></li>
         <li><Link to="/shop/popular">Our shop</Link></li>
-        <li><Link className=" "><FaShoppingCart />
+        <li><Link  to="/dashboard/mycart" className=" "><FaShoppingCart />
             <div className="badge badge-secondary">+{cart?.length || 0}</div></Link></li>
+            
     </>
     return (
         <div>

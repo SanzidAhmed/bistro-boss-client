@@ -7,6 +7,8 @@ import Menu from "../components/Pages/Menu/Menu";
 import OurShop from "../components/Pages/OurShop/OurShop";
 import Login from "../components/Pages/Login/Login";
 import SignUp from "../components/Pages/SignUp/SignUp";
+import DashBoard from "../Layout/DashBoard";
+import MyCart from "../components/Pages/Dashboard/MyCart/MyCart";
 
 
 
@@ -38,6 +40,13 @@ export const router = createBrowserRouter([
       ]
     },
     {
-      
+      path: 'dashboard',
+      element: <DashBoard></DashBoard>,
+      children:[
+        {
+          path: 'mycart',
+          element: <MyCart></MyCart>
+        }
+      ]
     }
   ]);
